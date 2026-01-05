@@ -1,0 +1,75 @@
+
+/*header layout*/
+.amazon-header{
+  display:flex;
+  flex:1;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color:rgb(19,25,33);
+  color: white;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  padding: 5px;
+}
+/*header-left part*/
+.amazon-header .left-section{
+ 
+  width: 180px;
+ 
+}
+.amazon-logo{
+  width: 100px;
+  margin-top: 7px;
+}
+/*header-middle part（searchbar）*/
+.amazon-header .middle-section{
+  width: 800px;
+  height: 40px;
+  display: flex;
+  margin: 0%;
+}
+.amazon-header .header-search{
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  
+}
+.amazon-header .search-button{
+  height:47px;
+  width: 40px;
+  background-color: rgb(254,189,105);
+  cursor: pointer;
+}
+.amazon-header .search-icon{
+  height: 26px;
+}
+/*header-right section*/
+.amazon-header .right-section{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+  
+}
+.amazon-header .right-section a{
+  text-decoration: none;
+  color: white;
+}
+.amazon-header .return-order1{
+  display: block;
+  color: aliceblue;
+  font-size: 13px;
+  
+}
+.amazon-header .return-order2{
+  display: block;
+  color:white;
+  font-size:15px;
+  font-weight:700;
+}
+.amazon-header .order-cart{
+  width: 50px;
+}
