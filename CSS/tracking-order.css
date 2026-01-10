@@ -1,0 +1,58 @@
+.tracking-main{
+  
+  max-width: 850px;/*加入这个会成响应式的感觉，大小不是固定似的*/
+  margin-top: 90px;
+  margin-bottom: 100px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;/*这两个auto，让该元素居于父container中间*/
+  margin-right: auto;
+}
+.tracking-main .product-image{
+  max-width: 150px;
+  max-height: 150px;
+  margin-top: 25px;
+  margin-bottom: 50px;
+
+}
+.tracking-main .all-orders{
+  display: inline-block;
+  margin-bottom: 30px;
+  cursor: pointer;
+  color: #017cb6;
+}
+.tracking-main .arriving-date{
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.tracking-main .product-name{
+  margin-bottom: 3px;
+}
+.tracking-main .product-quantity{
+  margin-bottom: 3px;
+}  
+.tracking-main .progress-lables-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.tracking-main .progress-bar-container{
+  height: 25px;
+  width: 100%;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 50px;
+  overflow: hidden;
+}
+.tracking-main .progress-bar{/*figure out details why?*/
+
+    height: 100%;
+    background-color: green;
+    border-radius: 50px;
+    width: 30%;
+    transition: width 1s;
+
+}
