@@ -19,16 +19,18 @@
   align-items: center;
 }
 .product-grids .product-name{
-  height:  40px;
-  margin-bottom: 5px;
+  height:  50px;
+  margin-bottom: 10px;
 }
 .product-grids .produt-rating{
   display: flex;
   align-items: center;
 }
 .product-grids .produt-rating img{
+  
   width: 100px;
   margin-right: 6px;
+  
 }
 .product-grids .rating-count{
   color:#017cb6;
