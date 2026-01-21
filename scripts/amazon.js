@@ -2,8 +2,7 @@ import {products} from "../data/products.js";
 import {cart,addToCart} from "../data/cart.js";
 
 
-
-
+countCartQuantity();
 let productsHTML= '';
 
 products.forEach((product) => {
@@ -14,10 +13,10 @@ products.forEach((product) => {
         </div>
         <div class="product-name">${product.name}</div>
         <div class="produt-rating">
-          <img src="images/ratings/rating-${product.rating.stars*10}.png" >
+          <img src="${product.getStarUrl()}" >
           <div class="rating-count">${product.rating.count}</div>
         </div>
-        <div class="product-price">$${(product.priceCents / 100).toFixed(2)}</div>
+        <div class="product-price">${product.getPrice()}</div>
         <div class="selector-container">
           <select class="selector">
             <option selected >1</option>
@@ -32,11 +31,10 @@ products.forEach((product) => {
             <option>10</option>
           </select>
         </div>
-
+          ${product.extraInfoHTML()}
           <div class="product-space"></div>
-          <div class="added-to-cart">
-            <img src="images/icons/checkmark.png">
-            Added
+          <div class="added-to-cart js-added-to-cart-${product.id}">
+            
           </div>
           
           
@@ -46,7 +44,11 @@ products.forEach((product) => {
       </div>
   `;
 });
-
+function showAddedPhoto(productId){
+  document.querySelector(`.js-added-to-cart-${productId}`).innerHTML=`<img src="images/icons/checkmark.png">
+            Added`;
+  
+}
 
 //render amazon_index html
 document.querySelector('.js-products-grid').innerHTML=productsHTML;
@@ -64,7 +66,9 @@ document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
   button.addEventListener('click',()=>{
       const productId=button.dataset.productId;
       addToCart(productId);
-      countCartQuantity();  
+      countCartQuantity();
+      showAddedPhoto(productId);
+
   });
 });
 
